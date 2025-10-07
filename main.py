@@ -13,6 +13,8 @@ app = FastAPI()
 origins = [
     "http://192.229.87.153:4200",
     "https://192.229.87.153:4200",
+    "http://192.229.87.153:4200/",
+    "https://192.229.87.153:4200/",
     "http://sportbet-insk.netlify.app",
     "https://sportbet-insk.netlify.app",
     "www.sportbet-insk.netlify.app",
@@ -22,6 +24,7 @@ origins = [
     "http://localhost",
     "https://localhost", 
 ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
