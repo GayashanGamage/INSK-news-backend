@@ -11,24 +11,16 @@ load_dotenv()
 app = FastAPI()
 
 origins = [
-    "http://192.229.87.153:4200",
-    "https://192.229.87.153:4200",
-    "http://192.229.87.153:4200/",
-    "https://192.229.87.153:4200/",
+    "https://8jjsport.com.in", 
     "https://8jjsport.com.in/",
-    "https://8jjsport.com.in",
+    "http://8jjsport.com.in", 
     "http://8jjsport.com.in/",
-    "http://8jjsport.com.in",
-    "www.8jjsport.com.in/",
-    "www.8jjsport.com.in",
-    "http://sportbet-insk.netlify.app",
-    "https://sportbet-insk.netlify.app",
-    "www.sportbet-insk.netlify.app",
+    "https://8jjsport.com.in/",
+    "http://8jjsport.com.in/",
     "http://localhost:3000",
     "https://localhost:3000",
-    "https://sportbet-insk.netlify.app/",
     "http://localhost",
-    "https://localhost", 
+    "https://localhost",
 ]
 
 app.add_middleware(
@@ -39,5 +31,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(news.newsRouters, prefix="/api")
-app.include_router(cricket.cricketRouters, prefix="/api")
+app.include_router(news.newsRouters,)
+app.include_router(cricket.cricketRouters,)
